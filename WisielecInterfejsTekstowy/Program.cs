@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using WiesielecLogika;
 
@@ -12,11 +13,12 @@ namespace WisielecInterfejsTekstowy
     {
         static string[] pozycjeMenu =
             {
-                "Nowa gra", "Wyjscie"
+                "Nowa gra", "Ranking" ,"Wyjscie"
             };
         static int aktywnaPozycja = 0;
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             StartMenu();
         }
 
@@ -27,7 +29,7 @@ namespace WisielecInterfejsTekstowy
                 case 0:
                     Console.Clear();
                     GraWisielec graWisielec = new GraWisielec(); //inicjalizacja gry
-                    graWisielec.NowaGra(2,"Kamil");
+                    graWisielec.NowaGra(2,"Piotr");
                     int rozmiarSlowa = graWisielec.GetSlowo().GetSlowo().Length;//wielkość wylosowanego słowa
                     char[] haslo = new char[rozmiarSlowa];
                     char wpisanaLitera;
@@ -42,9 +44,11 @@ namespace WisielecInterfejsTekstowy
                         Console.Clear();
                         Console.SetCursorPosition(80,2);
                         Console.WriteLine("Lifes: " + graWisielec.GetLifes());
+                        Console.SetCursorPosition(80, 4);
+                        Console.WriteLine("Points: " + graWisielec.GetPoints());
                         Console.SetCursorPosition(0, 0);
-                        Console.WriteLine("Oto haslo, posiada "+rozmiarSlowa+" liter. Haslo o kategorii "+graWisielec.GetSlowo().GetKategoria());
-                        Console.WriteLine("Haslo to: ");
+                        Console.WriteLine("Oto hasło, posiada "+rozmiarSlowa+" liter. Haslo o kategorii "+graWisielec.GetSlowo().GetKategoria());
+                        Console.WriteLine("Hasło to: ");
                         Console.Write(haslo);
                         Console.WriteLine();
                         Console.WriteLine("Podaj litere");
@@ -74,7 +78,7 @@ namespace WisielecInterfejsTekstowy
                                 Console.WriteLine("Juz odgadles/as te litere! Wpisz inna!");
                             }
 
-                            if (graWisielec.GetLifes() == 0)
+                            if (graWisielec.KoniecGry()==1)
                             {
                                 Console.Clear();
                                 Console.WriteLine("Niestety przegrales/as :(");
@@ -83,7 +87,7 @@ namespace WisielecInterfejsTekstowy
                                 Console.ReadKey();
                                 break;
                             }
-                            if (graWisielec.GetOdgadnieteLitery() == rozmiarSlowa)
+                            if (graWisielec.KoniecGry()==2)
                             {
                                 Console.Clear();
                                 Console.WriteLine("Gratulacje! Odgadles/as haslo :)");
@@ -102,10 +106,14 @@ namespace WisielecInterfejsTekstowy
 
                     break;
                 case 1:
+                    RysujRanking();
+                    break;
+                case 2:
                     Environment.Exit(0);
                     break;
             }
         }
+
 
         //uruchomienie metod generujących menu
         static void StartMenu()
@@ -125,8 +133,14 @@ namespace WisielecInterfejsTekstowy
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine(">>>WISIELEC<<<");
-            Console.WriteLine();
+            Console.WriteLine(@"____    __    ____  __       _______. __   _______  __       _______   ______ ");
+            Console.WriteLine(@"\   \  /  \  /   / |  |     /       ||  | |   ____||  |     |   ____| /      |");
+            Console.WriteLine(@" \   \/    \/   /  |  |    |   (----`|  | |  |__   |  |     |  |__   |  ,----'");
+            Console.WriteLine(@"  \            /   |  |     \   \    |  | |   __|  |  |     |   __|  |  |     ");
+            Console.WriteLine(@"   \    /\    /    |  | .----)   |   |  | |  |____ |  `----.|  |____ |  `----.");
+            Console.WriteLine(@"    \__/  \__/     |__| |_______/    |__| |_______||_______||_______| \______|");
+            int x = 10;
+            Console.SetCursorPosition(20, x);
             for (int i = 0; i < pozycjeMenu.Length; i++)
             {
                 if (i == aktywnaPozycja)
@@ -141,6 +155,8 @@ namespace WisielecInterfejsTekstowy
                 {
                     Console.WriteLine(pozycjeMenu[i]);
                 }
+                x++;
+                Console.SetCursorPosition(20, x);
             }
         }
         //przechodzenie między opcjami
@@ -169,6 +185,18 @@ namespace WisielecInterfejsTekstowy
                     break;
                 }
             } while (true);
+        }
+
+        private static void RysujRanking()
+        {
+            Console.Clear();
+            Ranking ranking= new Ranking();
+            var sortedRanking = ranking.GetSortedRanking();
+            foreach (KeyValuePair<string, int> pair in sortedRanking)
+            {
+                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+            }
+            Console.ReadKey();
         }
     }
 }
