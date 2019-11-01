@@ -33,7 +33,7 @@ namespace WiesielecLogika
             //wczytywanie z pliku łatwych słów
             try
             {
-                using(StreamReader sr=new StreamReader(@"C:\Users\kamil\Desktop\KCK-projekt\latwe.txt"))
+                using(StreamReader sr=new StreamReader("latwe.txt"))
                 {
                     string line;
                     string[] split;
@@ -51,12 +51,13 @@ namespace WiesielecLogika
             {
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
+                Environment.Exit(1);
             }
 
             //wczytywanie z pliku trudnych słów
             try
             {
-                using (StreamReader sr = new StreamReader(@"C:\Users\kamil\Desktop\KCK-projekt\trudne.txt"))
+                using (StreamReader sr = new StreamReader("trudne.txt"))
                 {
                     string line;
                     string[] split;
@@ -74,6 +75,7 @@ namespace WiesielecLogika
             {
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
+                Environment.Exit(1);
             }
         }
 

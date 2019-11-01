@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)GraWisielec.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BazaSlow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ranking.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Slowo.cs" />
   </ItemGroup>
 </Project>

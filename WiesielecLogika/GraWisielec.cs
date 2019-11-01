@@ -16,11 +16,12 @@ namespace WiesielecLogika
         private List<char> wpisaneLitery; // lista liter które w danej grze były już odgadnięte
         //tworzenie nowej gry- inicjalizacja pól/ wylosowanie hasła zgodnie z wybranym poziomem
         //trudności
+        private Ranking ranking = new Ranking();
         public void NowaGra(int difficultyLevelPar, string playerNamePar)
         {
             this.difficultyLevel = difficultyLevelPar;
             this.playerName = playerNamePar;
-            this.points = 0;
+            this.points = ranking.GetPoints(playerNamePar);
             this.odgadnieteLitery = 0;
             this.wpisaneLitery = new List<char>();
             if (difficultyLevel == 1)
@@ -61,11 +62,32 @@ namespace WiesielecLogika
                 if (slowo[i] == litera)
                 {
                     pozycje.Add(i);
+                    points++;
                     odgadnieteLitery++;
                 }
             }
             return pozycje;
         }
+
+        public int KoniecGry()
+        {
+            if (lifes == 0)
+            {
+                points = ranking.GetPoints(playerName);
+                points -= slowo.GetSlowo().Length;
+                ranking.SetPoints(playerName, points);
+                ranking.ZapiszStan();
+                return 1; // przegrana
+            }
+            else if (odgadnieteLitery == slowo.GetSlowo().Length)
+            {
+                ranking.SetPoints(playerName, points);
+                ranking.ZapiszStan();
+                return 2; //wygrana
+            }
+            return 3; // gra się nie skończyła
+        }
+
         //gettery
         public int GetLifes()
         {
@@ -83,5 +105,6 @@ namespace WiesielecLogika
         {
             return slowo;
         }
+
     }
 }

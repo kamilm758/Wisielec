@@ -1,0 +1,4 @@
+kamil 33
+Piotr 50
+Krycha -20
+a -144
