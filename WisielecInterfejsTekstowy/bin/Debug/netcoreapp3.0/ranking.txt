@@ -1,4 +1,5 @@
-kamil 33
-Piotr 50
-Krycha -20
-a -144
+t -1
+Kamil 10
+Testowy 30
+Erox -8
+qwertyuiop -10

@@ -23,3 +23,14 @@ C:\Users\Adrian\Desktop\Wiesielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp
 C:\Users\Adrian\Desktop\Wiesielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.AssemblyInfo.cs
 C:\Users\Adrian\Desktop\Wiesielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.dll
 C:\Users\Adrian\Desktop\Wiesielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.pdb
+C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.exe
+C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.deps.json
+C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.runtimeconfig.json
+C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.runtimeconfig.dev.json
+C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.dll
+C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.pdb
+C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.csprojAssemblyReference.cache
+C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.AssemblyInfoInputs.cache
+C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.AssemblyInfo.cs
+C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.dll
+C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.pdb

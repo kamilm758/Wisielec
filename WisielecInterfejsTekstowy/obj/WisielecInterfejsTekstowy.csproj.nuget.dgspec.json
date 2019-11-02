@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adrian\\Desktop\\Wiesielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj": {}
+    "C:\\Users\\kamil\\Desktop\\GitRepos\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adrian\\Desktop\\Wiesielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj": {
+    "C:\\Users\\kamil\\Desktop\\GitRepos\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adrian\\Desktop\\Wiesielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj",
+        "projectUniqueName": "C:\\Users\\kamil\\Desktop\\GitRepos\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj",
         "projectName": "WisielecInterfejsTekstowy",
-        "projectPath": "C:\\Users\\Adrian\\Desktop\\Wiesielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj",
-        "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adrian\\Desktop\\Wiesielec\\WisielecInterfejsTekstowy\\obj\\",
+        "projectPath": "C:\\Users\\kamil\\Desktop\\GitRepos\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj",
+        "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kamil\\Desktop\\GitRepos\\Wisielec\\WisielecInterfejsTekstowy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
