@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace WisielecInterfejsTekstowy
     {
         static string[] pozycjeMenu =
             {
-                "Nowa gra", "Poziom Trudnosci", "Ranking" ,"Wyjscie"
+                "Nowa gra", "Zmien poziom trudnosci", "Ranking" ,"Wyjscie"
             };
         static string[] poziomyTrudnosciString =
         {
@@ -68,23 +68,27 @@ namespace WisielecInterfejsTekstowy
                         Console.Write("O życie walczy: " + nazwaGracza);
                         Console.BackgroundColor = ConsoleColor.Gray;
                         Console.ForegroundColor = ConsoleColor.DarkCyan;
-                        Console.SetCursorPosition(20, 5);
-                        Console.Write("Oto hasło, posiada "+rozmiarSlowa+" liter. Haslo o kategorii "+graWisielec.GetSlowo().GetKategoria());
+                        Console.SetCursorPosition(4, 2);
+                        Console.Write("Przed Tobą hasło na " + rozmiarSlowa + " liter z kategorii " + graWisielec.GetSlowo().GetKategoria()+ ".");
                         Console.SetCursorPosition(40, 6);
                         Console.Write("Hasło to: ");
                         Console.Write(haslo);
                         Console.WriteLine();
                         RysujWisielca(poziomTrudnosci, graWisielec.GetLifes());
-
-                        Console.WriteLine("\n\nPodaj litere");
+                        
+                        Console.SetCursorPosition(4, 14);
+                        Console.WriteLine("Podaj litere: ");
 
                         try
                         {
+                            Console.SetCursorPosition(4, 15);
                             wpisanaLitera = Convert.ToChar(Console.ReadLine());
+                            Console.SetCursorPosition(4, 16);
                             Console.WriteLine("Wpisales litere: " + wpisanaLitera);
                             czyZawiera = graWisielec.SprawdzCzyJest(wpisanaLitera);
                             if (czyZawiera == 1)
                             {
+                                Console.SetCursorPosition(4, 18);
                                 Console.WriteLine("Niestety podana przez Ciebie litera" +
                                     " nie znajduje sie w hasle. Tracisz jedno zycie");
 
@@ -92,6 +96,7 @@ namespace WisielecInterfejsTekstowy
                             else if(czyZawiera==3)
                             {
                                 pozycjeLiter = graWisielec.ZwrocIndexOdgadnietej(wpisanaLitera);
+                                Console.SetCursorPosition(4, 18);
                                 Console.WriteLine("Gratulacje! Podana litera znajduje sie w hasle!");
                                 foreach(var value in pozycjeLiter)
                                 {
@@ -101,15 +106,18 @@ namespace WisielecInterfejsTekstowy
                             }
                             else if(czyZawiera==2)
                             {
+                                Console.SetCursorPosition(4, 18);
                                 Console.WriteLine("Juz odgadles/as te litere! Wpisz inna!");
                             }
 
                             if (graWisielec.KoniecGry()==1)
                             {
                                 Console.Clear();
-                                
+                                Console.SetCursorPosition(35, 4);
                                 Console.WriteLine("Niestety przegrales/as :(");
+                                Console.SetCursorPosition(35, 5);
                                 Console.WriteLine("Haslem bylo: " + graWisielec.GetSlowo().GetSlowo());
+                                Console.SetCursorPosition(35, 7);
                                 Console.WriteLine("<<<NACISNIJ ENETER ABY POWROCIC DO MENU GLOWNEGO>>>");
                                 RysujWisielca(poziomTrudnosci, graWisielec.GetLifes());
                                 Console.ReadKey();
@@ -118,7 +126,9 @@ namespace WisielecInterfejsTekstowy
                             if (graWisielec.KoniecGry()==2)
                             {
                                 Console.Clear();
+                                Console.SetCursorPosition(35, 4);
                                 Console.WriteLine("Gratulacje! Odgadles/as haslo :)");
+                                Console.SetCursorPosition(35, 6);
                                 Console.WriteLine("<<<NACISNIJ ENTER ABY POWROCIC DO MENU GLOWNEGO>>>");
                                 Console.ReadKey();
                                 break;
@@ -126,7 +136,9 @@ namespace WisielecInterfejsTekstowy
                         }
                         catch (Exception) 
                         {
+                            Console.SetCursorPosition(4, 18);
                             Console.WriteLine("Wpisany znak to nie litera! Sprobuj ponownie!");
+                            Console.SetCursorPosition(4, 20);
                             Console.WriteLine("Wciśnij <<ENTER>> aby kontynuować!");
                         }
                         Console.ReadKey();
@@ -165,14 +177,14 @@ namespace WisielecInterfejsTekstowy
             Console.BackgroundColor = ConsoleColor.Gray;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine(@"____    __    ____  __       _______. __   _______  __       _______   ______ ");
-            Console.WriteLine(@"\   \  /  \  /   / |  |     /       ||  | |   ____||  |     |   ____| /      |");
-            Console.WriteLine(@" \   \/    \/   /  |  |    |   (----`|  | |  |__   |  |     |  |__   |  ,----'");
-            Console.WriteLine(@"  \            /   |  |     \   \    |  | |   __|  |  |     |   __|  |  |     ");
-            Console.WriteLine(@"   \    /\    /    |  | .----)   |   |  | |  |____ |  `----.|  |____ |  `----.");
-            Console.WriteLine(@"    \__/  \__/     |__| |_______/    |__| |_______||_______||_______| \______|");
+            Console.WriteLine(@"                          ____    __    ____  __       _______. __   _______  __       _______   ______ ");
+            Console.WriteLine(@"                          \   \  /  \  /   / |  |     /       ||  | |   ____||  |     |   ____| /      |");
+            Console.WriteLine(@"                           \   \/    \/   /  |  |    |   (----`|  | |  |__   |  |     |  |__   |  ,----'");
+            Console.WriteLine(@"                            \            /   |  |     \   \    |  | |   __|  |  |     |   __|  |  |     ");
+            Console.WriteLine(@"                             \    /\    /    |  | .----)   |   |  | |  |____ |  `----.|  |____ |  `----.");
+            Console.WriteLine(@"                              \__/  \__/     |__| |_______/    |__| |_______||_______||_______| \______|");
             int x = 10;
-            Console.SetCursorPosition(20, x);
+            Console.SetCursorPosition(50, x);
 
             for (int i = 0; i < pozycjeMenu.Length; i++)
             {
@@ -191,7 +203,7 @@ namespace WisielecInterfejsTekstowy
                     else Console.WriteLine(pozycjeMenu[i]);
                 }
                 x++;
-                Console.SetCursorPosition(20, x);
+                Console.SetCursorPosition(50, x);
             }
         }
         //przechodzenie między opcjami
@@ -229,9 +241,6 @@ namespace WisielecInterfejsTekstowy
             Console.Clear();
             Console.SetCursorPosition(50, 2);
             Console.Write(RANKING);
-            Console.SetCursorPosition(50, 25);
-            Console.BackgroundColor = ConsoleColor.Green;
-            Console.WriteLine("Wciśnij DOWOLNY PRZYCISK aby powrócić do menu głównego");
             Console.BackgroundColor = ConsoleColor.Gray;
             Ranking ranking= new Ranking();
             var sortedRanking = ranking.GetSortedRanking();
@@ -242,6 +251,11 @@ namespace WisielecInterfejsTekstowy
                 i++;
                 x++;
             }
+            x++;
+            Console.SetCursorPosition(35, x);
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("Wciśnij DOWOLNY PRZYCISK aby powrócić do menu głównego");
             Console.ReadKey();
         }
 
@@ -265,9 +279,11 @@ namespace WisielecInterfejsTekstowy
                 Console.SetCursorPosition(50, 13);
                 Console.WriteLine("Przedstaw się skazańcze: ");
                 Console.SetCursorPosition(50, 25);
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.BackgroundColor = ConsoleColor.Red;
-                Console.WriteLine("Nie więcej niż 10 liter!");
+                Console.WriteLine(" Nie więcej niż 10 liter! ");
                 Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.SetCursorPosition(50, 14);
                 nazwaGracza = Console.ReadLine();
                 if (nazwaGracza.Length > 10)
@@ -299,67 +315,65 @@ namespace WisielecInterfejsTekstowy
             //Pierwsze życie
             if (lifes <= 6)
             {
-                Console.WriteLine("\n");
-                Console.WriteLine("        oooo");
-                Console.WriteLine("       o     o");
-                Console.WriteLine("      o       o");
-                Console.WriteLine("       o     o");
-                Console.WriteLine("        oooo");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(0, 4);
+                Console.WriteLine("      ########");
+                Console.WriteLine("       #    | ");
+                Console.WriteLine("       #     ");
+                Console.WriteLine("       #     ");
+                Console.WriteLine("       #   ");
+                Console.WriteLine("       #   ");
+                Console.WriteLine("       #");
+                Console.WriteLine("    ###########");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
             }
 
             if (lifes <= 5)
             {
-                //Drugie
-                Console.WriteLine("          x");
-                Console.WriteLine("          x");
-                Console.WriteLine("          x");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(4, 6);
+                Console.WriteLine("   #    O ");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
 
             }
 
             if (lifes <= 4)
             {
-                Console.SetCursorPosition(0, 13);
-                Console.WriteLine("        x x");
-                Console.WriteLine("       x  x");
-                Console.WriteLine("      x   x");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(4, 7);
+                Console.WriteLine("   #    | ");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
             }
             if (lifes <= 3)
             {
-                Console.SetCursorPosition(0, 13);
-                Console.WriteLine("        x x x");
-                Console.WriteLine("       x  x  x");
-                Console.WriteLine("      x   x   x");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(4, 7);
+                Console.WriteLine("   #   /| ");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
             }
             if (lifes <= 2)
             {
-                Console.SetCursorPosition(0, 15);
-                Console.WriteLine("      x   x   x");
-                Console.WriteLine("          x");
-                Console.WriteLine("         x x");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(4, 7);
+                Console.WriteLine("   #   /|\\ ");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
             }
             if (lifes <= 1)
             {
-                
-                Console.SetCursorPosition(0, 16);
-                //Console.WriteLine("          x");
-                Console.WriteLine("          x");
-                Console.WriteLine("         x x");
-                Console.WriteLine("        x");
-                Console.WriteLine("        x");
-                Console.WriteLine("        x");
-                Console.WriteLine("        x");
+
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(4, 8);
+                Console.WriteLine("   #   /   ");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
             }
             if (lifes <= 0)
             {
-   
-                Console.SetCursorPosition(0, 16);
-                //Console.WriteLine("          x");
-                Console.WriteLine("          x");
-                Console.WriteLine("         x x");
-                Console.WriteLine("        x   x");
-                Console.WriteLine("        x   x");
-                Console.WriteLine("        x   x");
-                Console.WriteLine("        x   x");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(4, 6);
+                Console.WriteLine("   #    X ");
+                Console.SetCursorPosition(4, 8);
+                Console.WriteLine("   #   / \\ ");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
             }
         }
         private static void RysujWisielcaHard(int lifes)
@@ -367,39 +381,44 @@ namespace WisielecInterfejsTekstowy
             //Pierwsze życie
             if (lifes <= 3)
             {
-                Console.WriteLine("\n");
-                Console.WriteLine("        oooo");
-                Console.WriteLine("       o     o");
-                Console.WriteLine("      o       o");
-                Console.WriteLine("       o     o");
-                Console.WriteLine("        oooo");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(0, 4);
+                Console.WriteLine("      ########");
+                Console.WriteLine("       #    | ");
+                Console.WriteLine("       #     ");
+                Console.WriteLine("       #     ");
+                Console.WriteLine("       #   ");
+                Console.WriteLine("       #   ");
+                Console.WriteLine("       #");
+                Console.WriteLine("    ###########");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
             }
 
             if (lifes <= 2)
             {
-                //Drugie
-                Console.WriteLine("          x");
-                Console.WriteLine("          x");
-                Console.WriteLine("        x x x");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(4, 6);
+                Console.WriteLine("   #    O ");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
 
             }
 
             if (lifes <= 1) 
             {
-       
-                Console.WriteLine("       x  x  x");
-                Console.WriteLine("      x   x   x");
-                Console.WriteLine("          x");
-                Console.WriteLine("          x");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(4, 7);
+                Console.WriteLine("   #   /|\\ ");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
             }
 
             if(lifes <= 0)
             {
-                Console.WriteLine("         x x");
-                Console.WriteLine("        x   x");
-                Console.WriteLine("        x   x");
-                Console.WriteLine("        x   x");
-                Console.WriteLine("        x   x");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(4, 6);
+                Console.WriteLine("   #    X ");
+                Console.SetCursorPosition(4, 8);
+                Console.WriteLine("   #   / \\ ");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
             }
         }
         static readonly string RANKING = @" 
