@@ -27,7 +27,7 @@ namespace WisielecInterfejsTekstowy
             Console.OutputEncoding = Encoding.UTF8;
             StartMenu();
         }
-
+        static string wynik = "";
         static void UruchomOpcje()
         {
             switch (aktywnaPozycja)
@@ -75,12 +75,19 @@ namespace WisielecInterfejsTekstowy
                         Console.Write(haslo);
                         Console.WriteLine();
                         RysujWisielca(poziomTrudnosci, graWisielec.GetLifes());
-                        
+                        if (poziomTrudnosci == 1)
+                        {
+                            Console.SetCursorPosition(90, 5);
+                            Console.Write("Wpisane litery: " + wynik);
+                        }
                         Console.SetCursorPosition(4, 14);
                         Console.WriteLine("Podaj litere: ");
 
                         try
                         {
+                            bool bylawpisana = false;
+                          
+
                             Console.SetCursorPosition(4, 15);
                             wpisanaLitera = Convert.ToChar(Console.ReadLine());
                             Console.SetCursorPosition(4, 16);
@@ -88,9 +95,26 @@ namespace WisielecInterfejsTekstowy
                             czyZawiera = graWisielec.SprawdzCzyJest(wpisanaLitera);
                             if (czyZawiera == 1)
                             {
+                                
                                 Console.SetCursorPosition(4, 18);
                                 Console.WriteLine("Niestety podana przez Ciebie litera" +
                                     " nie znajduje sie w hasle. Tracisz jedno zycie");
+                                for(int i=0;i<wynik.Length;i++)
+                                {
+                                    if(wynik[i]==wpisanaLitera)
+                                    {
+                         
+                                        bylawpisana = true;
+                                    }
+                                    
+                                }
+                                if(bylawpisana==false)
+                                {
+                                    wynik = wynik + " " + wpisanaLitera;
+                                }
+                                
+                                
+
 
                             }
                             else if(czyZawiera==3)

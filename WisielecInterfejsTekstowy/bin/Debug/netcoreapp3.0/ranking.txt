@@ -3,3 +3,8 @@ Kamil 10
 Testowy 30
 Erox -8
 qwertyuiop -10
+ada -8
+a 8
+aasa -9
+aas -38
+as -38

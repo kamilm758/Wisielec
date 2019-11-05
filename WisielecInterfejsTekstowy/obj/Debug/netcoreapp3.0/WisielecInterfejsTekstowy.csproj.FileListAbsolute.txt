@@ -34,3 +34,14 @@ C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\obj\Debug\net
 C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.AssemblyInfo.cs
 C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.dll
 C:\Users\kamil\Desktop\GitRepos\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.pdb
+C:\Users\AdriannaJK\Desktop\projektwisielec\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.csprojAssemblyReference.cache
+C:\Users\AdriannaJK\Desktop\projektwisielec\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.AssemblyInfoInputs.cache
+C:\Users\AdriannaJK\Desktop\projektwisielec\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.AssemblyInfo.cs
+C:\Users\AdriannaJK\Desktop\projektwisielec\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.dll
+C:\Users\AdriannaJK\Desktop\projektwisielec\Wisielec\WisielecInterfejsTekstowy\obj\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.pdb
+C:\Users\AdriannaJK\Desktop\projektwisielec\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.exe
+C:\Users\AdriannaJK\Desktop\projektwisielec\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.deps.json
+C:\Users\AdriannaJK\Desktop\projektwisielec\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.runtimeconfig.json
+C:\Users\AdriannaJK\Desktop\projektwisielec\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.runtimeconfig.dev.json
+C:\Users\AdriannaJK\Desktop\projektwisielec\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.dll
+C:\Users\AdriannaJK\Desktop\projektwisielec\Wisielec\WisielecInterfejsTekstowy\bin\Debug\netcoreapp3.0\WisielecInterfejsTekstowy.pdb

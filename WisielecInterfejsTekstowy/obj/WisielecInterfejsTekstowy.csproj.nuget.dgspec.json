@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kamil\\Desktop\\GitRepos\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj": {}
+    "C:\\Users\\AdriannaJK\\Desktop\\projektwisielec\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kamil\\Desktop\\GitRepos\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj": {
+    "C:\\Users\\AdriannaJK\\Desktop\\projektwisielec\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kamil\\Desktop\\GitRepos\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj",
+        "projectUniqueName": "C:\\Users\\AdriannaJK\\Desktop\\projektwisielec\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj",
         "projectName": "WisielecInterfejsTekstowy",
-        "projectPath": "C:\\Users\\kamil\\Desktop\\GitRepos\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj",
-        "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kamil\\Desktop\\GitRepos\\Wisielec\\WisielecInterfejsTekstowy\\obj\\",
+        "projectPath": "C:\\Users\\AdriannaJK\\Desktop\\projektwisielec\\Wisielec\\WisielecInterfejsTekstowy\\WisielecInterfejsTekstowy.csproj",
+        "packagesPath": "C:\\Users\\AdriannaJK\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AdriannaJK\\Desktop\\projektwisielec\\Wisielec\\WisielecInterfejsTekstowy\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AdriannaJK\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
